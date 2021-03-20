@@ -1,0 +1,10 @@
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\武带\大二下\软件构造基础\Demo\homework1\CalculatorWinform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
