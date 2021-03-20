@@ -1,0 +1,7 @@
+D:\武带\大二下\软件构造基础\Demo\class2\demo1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\武带\大二下\软件构造基础\Demo\class2\demo1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\武带\大二下\软件构造基础\Demo\class2\demo1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\武带\大二下\软件构造基础\Demo\class2\demo1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\武带\大二下\软件构造基础\Demo\class2\demo1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\武带\大二下\软件构造基础\Demo\class2\demo1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\武带\大二下\软件构造基础\Demo\class2\demo1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
