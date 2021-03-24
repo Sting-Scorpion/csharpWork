@@ -10,6 +10,7 @@ namespace ConsoleApp1
     {
         static void Main()
         {
+			//未加入工厂设计模式！
             double allArea = 0;
             Shape[] shapes = new Shape[10];
             for(int i = 0; i < 10; i++)

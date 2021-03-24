@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+	//改进：各形状边长应该不对外隐藏
+	//可：设置属性获取边长的大小
     abstract class Shape
     {
         protected double side1, side2;
@@ -20,6 +22,7 @@ namespace ConsoleApp1
             get { return side1 * side2; }
         }
         public abstract bool isLegal();
+		//判断合法改进：可抛出一个异常
     }
     class Rectangle : Shape
     {
