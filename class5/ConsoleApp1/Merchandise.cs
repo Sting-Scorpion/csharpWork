@@ -6,21 +6,19 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Merchandise
+    [Serializable]
+    public class Merchandise
     {
-        //商品信息
-        string name;
-        double price;
-
-        //公共属性，获取对应值
-        public string Name { get => name; }
-        public double Price { get => price; }
+       //公共属性，获取对应值
+        public string Name { get; set; }
+        public double Price { get; set; }
 
         //构造函数初始化
+        public Merchandise() { }
         public Merchandise(string name, double price)
         {
-            this.name = name;
-            this.price = price;
+            this.Name = name;
+            this.Price = price;
         }
         //override
         public override string ToString()

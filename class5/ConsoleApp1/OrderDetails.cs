@@ -6,29 +6,27 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class OrderDetails
+    [Serializable]
+    public class OrderDetails
     {
-        //订单信息
-        Merchandise goods;
-        int number;
-        DateTime time;
-
         //公共属性
-        public Merchandise Goods { get => goods; }
-        public int Number { get => number; }
-        public DateTime Time { get => time; }
+        public Merchandise Goods { get; set; }
+        public int Number { get; set; }
+        public DateTime Time { get; set; }
+        public double Amount { get => Goods.Price * Number; }
 
         //构造函数
+        public OrderDetails() { }
         public OrderDetails(Merchandise goods, int num, DateTime time)
         {
-            this.goods = goods;
-            this.number = num;
-            this.time = time;
+            this.Goods = goods;
+            this.Number = num;
+            this.Time = time;
         }
         //override
         public override string ToString()
         {
-            return Goods.ToString() + "\n\tquantity: " + Number + "\n\torder time: " + time;
+            return Goods + "\n\tquantity: " + Number + "\n\tamount: " + Amount + "\n\torder time: " + Time;
         }
         public override bool Equals(object obj)
         {
@@ -37,7 +35,7 @@ namespace ConsoleApp1
         }
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return 785010553 + EqualityComparer<Merchandise>.Default.GetHashCode(Goods);
         }
     }
 }

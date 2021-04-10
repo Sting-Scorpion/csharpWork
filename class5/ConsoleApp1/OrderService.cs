@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Xml.Serialization;
+using System.IO;
 namespace ConsoleApp1
 {
-    class OrderService
+    [Serializable]
+    public class OrderService
     {
         List<Order> orderList = new List<Order>();
 
@@ -42,9 +44,9 @@ namespace ConsoleApp1
         public bool AddOrder(Order obj)
         {
             bool q = true;
-            foreach(var i in orderList)
+            foreach (var i in orderList)
             {
-                if(i.No == obj.No)
+                if (i.No == obj.No)
                 {
                     q = false;
                 }
@@ -66,7 +68,6 @@ namespace ConsoleApp1
                 return false;
             }
             orderList.Remove(obj);
-            orderList.Sort((x, y) => x.No.CompareTo(y.No));
             return true;
         }
         public bool ModifyOrder(Order obj, Client c)
@@ -77,30 +78,31 @@ namespace ConsoleApp1
                 return false;
             }
             //Can only modify the order's buyer's info
-            orderList[orderList.IndexOf(obj)].AlterBuyer(c);
+            orderList[orderList.IndexOf(obj)].Buyer = c;
             return true;
         }
 
+        //根据商品查找
         public IEnumerable<Order> FindMerchandise(Merchandise m)
         {
             var n =
                 from a in orderList
-                where a.OrderDetail.Goods == m
-                orderby a.TotalPrice, a.No
-                select a;
-            return n;
-        }
-        //根据商品查找
-        public IEnumerable<Order> FindTime(DateTime m)
-        {
-            var n =
-                from a in orderList
-                where a.OrderDetail.Time == m
+                where a.FindMerchandise(m) != null
                 orderby a.TotalPrice, a.No
                 select a;
             return n;
         }
         //根据下单时间查找
+        public IEnumerable<Order> FindTime(DateTime m)
+        {
+            var n =
+                from a in orderList
+                where a.FindTime(m) != null
+                orderby a.TotalPrice, a.No
+                select a;
+            return n;
+        }
+        //根据买家查找
         public IEnumerable<Order> FindBuyer(Client m)
         {
             var n =
@@ -110,7 +112,7 @@ namespace ConsoleApp1
                 select a;
             return n;
         }
-        //根据买家查找
+        //全部
         public IEnumerable<Order> FindAll()
         {
             var n =
@@ -118,6 +120,41 @@ namespace ConsoleApp1
                 where a != null
                 select a;
             return n;
+        }
+
+        //序列化
+        public bool Export()
+        {
+            string path = System.Environment.CurrentDirectory;
+            return Export(path);
+        }
+        public bool Export(string path)
+        {
+            XmlSerializer xml = new XmlSerializer(typeof(List<Order>));
+            Stream stream = new FileStream(path + "\\Orders.xml", FileMode.OpenOrCreate);
+            xml.Serialize(stream, orderList);
+            //stream.Close();
+            return true;
+        }
+        //反序列化
+        public bool Import()
+        {
+            string path = System.Environment.CurrentDirectory;
+            return Import(path);
+        }
+        public bool Import(string path)
+        {
+            XmlSerializer xml = new XmlSerializer(typeof(List<Order>));
+            Stream stream = new FileStream(path + "\\Orders.xml", FileMode.OpenOrCreate);
+            var oL = (List<Order>)xml.Deserialize(stream);
+            oL.ForEach(x => { if (!Exist(x)) orderList.Add(x); });//反序列化结果不重复地添加到已有list中
+            stream.Close();
+            //using(FileStream fs = new FileStream(path, FileMode.Open))
+            //{
+            //    List<Order> orders = (List<Order>)xml.Deserialize(fs);
+            //    orders.ForEach(x => orderList.Add(x));
+            //}
+            return true;
         }
     }
 }

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <Buyer>
+      <Name>张三</Name>
+      <Address>北京东路100号</Address>
+    </Buyer>
+    <OrderDetail>
+      <OrderDetails>
+        <Goods>
+          <Name>菲力牛排</Name>
+          <Price>128.88</Price>
+        </Goods>
+        <Number>2</Number>
+        <Time>2021-04-10T22:01:55.05136+08:00</Time>
+      </OrderDetails>
+    </OrderDetail>
+    <No>1000001</No>
+  </Order>
+  <Order>
+    <Buyer>
+      <Name>李四</Name>
+      <Address>南京西路666号</Address>
+    </Buyer>
+    <OrderDetail>
+      <OrderDetails>
+        <Goods>
+          <Name>豆腐巧克力</Name>
+          <Price>15</Price>
+        </Goods>
+        <Number>10</Number>
+        <Time>2021-04-10T22:01:55.052355+08:00</Time>
+      </OrderDetails>
+    </OrderDetail>
+    <No>1000002</No>
+  </Order>
+</ArrayOfOrder>er>

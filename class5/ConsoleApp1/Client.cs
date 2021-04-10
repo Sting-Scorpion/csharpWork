@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Client
+    [Serializable]
+    public class Client
     {
-        //客户信息
-        string name, address;
-
         //公共属性
-        public string Name { get => name; }
-        public string Address { get => address; }
+        public string Name { get; set; }
+        public string Address { get; set; }
 
         //构造函数
+        public Client() { }
         public Client(string name, string address)
         {
-            this.name = name;
-            this.address = address;
+            this.Name = name;
+            this.Address = address;
         }
         //override
         public override string ToString()
         {
-            return "\tclient name: " + Name + "\n\tclient's delivery address: " + address;
+            return "\tclient name: " + Name + "\n\tclient's delivery address: " + Address;
         }
     }
 }
