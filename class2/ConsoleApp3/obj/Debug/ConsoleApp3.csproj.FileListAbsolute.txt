@@ -1,0 +1,7 @@
+D:\武带\大二下\软件构造基础\csharpWork\class2\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+D:\武带\大二下\软件构造基础\csharpWork\class2\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+D:\武带\大二下\软件构造基础\csharpWork\class2\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+D:\武带\大二下\软件构造基础\csharpWork\class2\ConsoleApp3\obj\Debug\ConsoleApp3.csprojAssemblyReference.cache
+D:\武带\大二下\软件构造基础\csharpWork\class2\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+D:\武带\大二下\软件构造基础\csharpWork\class2\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+D:\武带\大二下\软件构造基础\csharpWork\class2\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
