@@ -1,0 +1,10 @@
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\obj\Debug\WindowsFormsApp.csprojAssemblyReference.cache
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\武带\大二下\软件构造基础\csharpWork\class7\WindowsFormsApp\obj\Debug\WindowsFormsApp.Caylay.resources
