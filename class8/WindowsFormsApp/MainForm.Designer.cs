@@ -44,25 +44,25 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.OrderDetailView = new System.Windows.Forms.DataGridView();
             this.detailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.OrderView = new System.Windows.Forms.DataGridView();
-            this.goodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.OrderView = new System.Windows.Forms.DataGridView();
             this.buyerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,9 +71,9 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(883, 80);
+            this.panel1.Size = new System.Drawing.Size(1177, 100);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -90,21 +90,21 @@
             this.tableLayoutPanel2.Controls.Add(this.AddBtn, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.DeleteBtn, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 52);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 65);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(883, 28);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1177, 35);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // ExportBtn
             // 
             this.ExportBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ExportBtn.Location = new System.Drawing.Point(706, 2);
-            this.ExportBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ExportBtn.Location = new System.Drawing.Point(943, 2);
+            this.ExportBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExportBtn.Name = "ExportBtn";
-            this.ExportBtn.Size = new System.Drawing.Size(175, 24);
+            this.ExportBtn.Size = new System.Drawing.Size(231, 31);
             this.ExportBtn.TabIndex = 4;
             this.ExportBtn.Text = "导出订单";
             this.ExportBtn.UseVisualStyleBackColor = true;
@@ -113,10 +113,10 @@
             // ImportBtn
             // 
             this.ImportBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ImportBtn.Location = new System.Drawing.Point(530, 2);
-            this.ImportBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ImportBtn.Location = new System.Drawing.Point(708, 2);
+            this.ImportBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ImportBtn.Name = "ImportBtn";
-            this.ImportBtn.Size = new System.Drawing.Size(172, 24);
+            this.ImportBtn.Size = new System.Drawing.Size(229, 31);
             this.ImportBtn.TabIndex = 3;
             this.ImportBtn.Text = "导入订单";
             this.ImportBtn.UseVisualStyleBackColor = true;
@@ -125,10 +125,10 @@
             // ModifyBtn
             // 
             this.ModifyBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ModifyBtn.Location = new System.Drawing.Point(354, 2);
-            this.ModifyBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ModifyBtn.Location = new System.Drawing.Point(473, 2);
+            this.ModifyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ModifyBtn.Name = "ModifyBtn";
-            this.ModifyBtn.Size = new System.Drawing.Size(172, 24);
+            this.ModifyBtn.Size = new System.Drawing.Size(229, 31);
             this.ModifyBtn.TabIndex = 2;
             this.ModifyBtn.Text = "修改订单";
             this.ModifyBtn.UseVisualStyleBackColor = true;
@@ -137,10 +137,10 @@
             // AddBtn
             // 
             this.AddBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AddBtn.Location = new System.Drawing.Point(2, 2);
-            this.AddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.AddBtn.Location = new System.Drawing.Point(3, 2);
+            this.AddBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(172, 24);
+            this.AddBtn.Size = new System.Drawing.Size(229, 31);
             this.AddBtn.TabIndex = 0;
             this.AddBtn.Text = "添加订单";
             this.AddBtn.UseVisualStyleBackColor = true;
@@ -149,10 +149,10 @@
             // DeleteBtn
             // 
             this.DeleteBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeleteBtn.Location = new System.Drawing.Point(178, 2);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.DeleteBtn.Location = new System.Drawing.Point(238, 2);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(172, 24);
+            this.DeleteBtn.Size = new System.Drawing.Size(229, 31);
             this.DeleteBtn.TabIndex = 1;
             this.DeleteBtn.Text = "删除订单";
             this.DeleteBtn.UseVisualStyleBackColor = true;
@@ -163,16 +163,16 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.4264F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.5736F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel1.Controls.Add(this.SearchTypeCBX, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.SearchBtn, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.SearchDetailtxt, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 10);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 12);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(538, 25);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(717, 31);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // SearchTypeCBX
@@ -184,20 +184,20 @@
             "时间",
             "买家",
             "全部"});
-            this.SearchTypeCBX.Location = new System.Drawing.Point(2, 2);
-            this.SearchTypeCBX.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchTypeCBX.Location = new System.Drawing.Point(3, 2);
+            this.SearchTypeCBX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchTypeCBX.Name = "SearchTypeCBX";
-            this.SearchTypeCBX.Size = new System.Drawing.Size(117, 20);
+            this.SearchTypeCBX.Size = new System.Drawing.Size(156, 23);
             this.SearchTypeCBX.TabIndex = 0;
             this.SearchTypeCBX.SelectedIndexChanged += new System.EventHandler(this.SearchTypeCBX_SelectedIndexChanged);
             // 
             // SearchBtn
             // 
             this.SearchBtn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SearchBtn.Location = new System.Drawing.Point(430, 2);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchBtn.Location = new System.Drawing.Point(572, 2);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(106, 21);
+            this.SearchBtn.Size = new System.Drawing.Size(142, 27);
             this.SearchBtn.TabIndex = 1;
             this.SearchBtn.Text = "查询";
             this.SearchBtn.UseVisualStyleBackColor = true;
@@ -206,10 +206,10 @@
             // SearchDetailtxt
             // 
             this.SearchDetailtxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SearchDetailtxt.Location = new System.Drawing.Point(123, 2);
-            this.SearchDetailtxt.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchDetailtxt.Location = new System.Drawing.Point(165, 2);
+            this.SearchDetailtxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchDetailtxt.Name = "SearchDetailtxt";
-            this.SearchDetailtxt.Size = new System.Drawing.Size(303, 21);
+            this.SearchDetailtxt.Size = new System.Drawing.Size(401, 25);
             this.SearchDetailtxt.TabIndex = 2;
             // 
             // panel2
@@ -217,10 +217,10 @@
             this.panel2.Controls.Add(this.OrderDetailView);
             this.panel2.Controls.Add(this.OrderView);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 80);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(883, 346);
+            this.panel2.Size = new System.Drawing.Size(1177, 432);
             this.panel2.TabIndex = 1;
             // 
             // OrderDetailView
@@ -232,24 +232,23 @@
             this.numberDataGridViewTextBoxColumn,
             this.timeDataGridViewTextBoxColumn,
             this.amountDataGridViewTextBoxColumn});
-            this.OrderDetailView.DataSource = this.detailBindingSource;
+            this.OrderDetailView.DataSource = this.orderDetailBindingSource;
             this.OrderDetailView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OrderDetailView.Location = new System.Drawing.Point(432, 0);
-            this.OrderDetailView.Margin = new System.Windows.Forms.Padding(2);
+            this.OrderDetailView.Location = new System.Drawing.Point(576, 0);
+            this.OrderDetailView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrderDetailView.Name = "OrderDetailView";
             this.OrderDetailView.RowHeadersWidth = 51;
             this.OrderDetailView.RowTemplate.Height = 27;
-            this.OrderDetailView.Size = new System.Drawing.Size(451, 346);
+            this.OrderDetailView.Size = new System.Drawing.Size(601, 432);
             this.OrderDetailView.TabIndex = 1;
             // 
             // detailBindingSource
             // 
-            this.detailBindingSource.DataSource = this.orderDetailBindingSource;
+            this.detailBindingSource.CurrentChanged += new System.EventHandler(this.detailBindingSource_CurrentChanged);
             // 
-            // orderDetailBindingSource
+            // orderBindingSource
             // 
-            this.orderDetailBindingSource.DataMember = "OrderDetail";
-            this.orderDetailBindingSource.DataSource = this.orderBindingSource;
+            this.orderBindingSource.DataSource = typeof(WindowsFormsApp.Order);
             // 
             // OrderView
             // 
@@ -262,49 +261,12 @@
             this.OrderView.DataSource = this.orderBindingSource;
             this.OrderView.Dock = System.Windows.Forms.DockStyle.Left;
             this.OrderView.Location = new System.Drawing.Point(0, 0);
-            this.OrderView.Margin = new System.Windows.Forms.Padding(2);
+            this.OrderView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrderView.Name = "OrderView";
             this.OrderView.RowHeadersWidth = 51;
             this.OrderView.RowTemplate.Height = 27;
-            this.OrderView.Size = new System.Drawing.Size(432, 346);
+            this.OrderView.Size = new System.Drawing.Size(576, 432);
             this.OrderView.TabIndex = 0;
-            // 
-            // goodsDataGridViewTextBoxColumn
-            // 
-            this.goodsDataGridViewTextBoxColumn.DataPropertyName = "Goods";
-            this.goodsDataGridViewTextBoxColumn.HeaderText = "Goods";
-            this.goodsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.goodsDataGridViewTextBoxColumn.Name = "goodsDataGridViewTextBoxColumn";
-            this.goodsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // numberDataGridViewTextBoxColumn
-            // 
-            this.numberDataGridViewTextBoxColumn.DataPropertyName = "Number";
-            this.numberDataGridViewTextBoxColumn.HeaderText = "Number";
-            this.numberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
-            this.numberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // timeDataGridViewTextBoxColumn
-            // 
-            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
-            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
-            this.timeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
-            this.timeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
-            this.amountDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(WindowsFormsApp.Order);
             // 
             // buyerDataGridViewTextBoxColumn
             // 
@@ -331,15 +293,53 @@
             this.totalPriceDataGridViewTextBoxColumn.ReadOnly = true;
             this.totalPriceDataGridViewTextBoxColumn.Width = 125;
             // 
+            // orderDetailBindingSource
+            // 
+            this.orderDetailBindingSource.DataMember = "OrderDetail";
+            this.orderDetailBindingSource.DataSource = this.orderBindingSource;
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            this.amountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.amountDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // timeDataGridViewTextBoxColumn
+            // 
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Time";
+            this.timeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
+            this.timeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // numberDataGridViewTextBoxColumn
+            // 
+            this.numberDataGridViewTextBoxColumn.DataPropertyName = "Number";
+            this.numberDataGridViewTextBoxColumn.HeaderText = "Number";
+            this.numberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            this.numberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // goodsDataGridViewTextBoxColumn
+            // 
+            this.goodsDataGridViewTextBoxColumn.DataPropertyName = "Goods";
+            this.goodsDataGridViewTextBoxColumn.HeaderText = "Goods";
+            this.goodsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.goodsDataGridViewTextBoxColumn.Name = "goodsDataGridViewTextBoxColumn";
+            this.goodsDataGridViewTextBoxColumn.Width = 125;
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 426);
+            this.ClientSize = new System.Drawing.Size(1177, 532);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "订单管理系统";
             this.panel1.ResumeLayout(false);
@@ -349,9 +349,9 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.OrderDetailView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderDetailBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -376,11 +376,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource orderBindingSource;
         private System.Windows.Forms.DataGridView OrderDetailView;
+        private System.Windows.Forms.BindingSource detailBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn goodsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource detailBindingSource;
         private System.Windows.Forms.BindingSource orderDetailBindingSource;
     }
 }

@@ -124,5 +124,10 @@ namespace WindowsFormsApp
             ModifyOrderForm a = new ModifyOrderForm(os, order);
             a.Show(this);
         }
+
+        private void detailBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
