@@ -1,355 +1,299 @@
-﻿<!doctype html>
-<html lang="zh-CN">
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?fb481430f1a5a6c7044229532823b9fd";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-
-
-
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="baidu-site-verification" content="GaTo5YnIV9" />
-    <title>百度用户服务中心-首页</title>
-    <meta name="keywords" content="百度服务中心、百度意见反馈、百度投诉反馈、百度倾听、百度帮助中心、百度产品投诉、百度产品意见">
-    <meta name="description" content="百度服务中心是百度客服官方网站，为您解决使用百度产品过程中遇到的问题，帮助用户更了解百度，也让百度更懂用户。">
-    <link rel="shortcut icon" href="/resources/images/favicon.ico"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="xml与json在javascript中解析并使用，速度大约相差4倍。（在IE中测试的结果）。其中主要不在于eval,与xml parse的时间差别，主要在于属性访问上的差别：xml中使用这样的方式 " />
+    <meta property="og:description" content="xml与json在javascript中解析并使用，速度大约相差4倍。（在IE中测试的结果）。其中主要不在于eval,与xml parse的时间差别，主要在于属性访问上的差别：xml中使用这样的方式 " />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>实测:xml与json速度约差4倍 - 拓荒者 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
     
-
-
-
-        <link type="text/css" rel="stylesheet" href="/resources/pc/css/normalize.min.css?timestamp=20181226" />
-    <link type="text/css" rel="stylesheet" href="/resources/pc/css/global.min.css?timestamp=20181226" />
-        
-  <link type="text/css" rel="stylesheet" href="/resources/pc/css/reset.min.css?timestamp=20181226" />
-<link type="text/css" rel="stylesheet" href="/resources/pc/css/indexnew.min.css?timestamp=20181226" />
-<link type="text/css" rel="stylesheet" href="/resources/pc/css/tabSwitch.min.css?timestamp=20181226">
-<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://www.layuicdn.com/layui-v2.5.5/css/layui.css">
-<link rel="stylesheet" href="/resources/pc/fontIcon/iconfont.m.css?timestamp=20181226" />
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/layui/2.5.5/layui.all.min.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="/resources/pc/js/lib/tangram-2.0.2.1.min.js"></script>
-    <!--[if (!IE)|(gte IE 9)]><!-->
-    <!-- <script type="text/javascript" src="/resources/pc/js/lib/jquery-3.2.1.min.js"></script> -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery-smoove/0.2.10/jquery.smoove.min.js"></script>
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=6tvK5XC6GPbg3p_sy7wzz_2291HoYACr4440iKBzQIw" />
+    <link id="MainCss" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001.min.css?v=9x2ZP2K8SSBJowZA6xv0D5FvOmlvd5g21u0NBEAEwfQ" />
     
-        <script type="text/javascript" src="https://passport.baidu.com/passApi/js/uni_login_wrapper.js?cdnversion=202105090045"></script>
-            <script type="text/javascript" src="/resources/pc/js/dist/common.min.js?timestamp=20181226"></script>
-        <!--<![endif]-->
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="/resources/js/lib/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="/resources/js/common.js"></script>
-    <![endif]-->
-    <script type="text/javascript">
-        $(function () {
-            login.init('https://passport.baidu.com', 'http://help.baidu.com/resources/html/jump.html', 'service_feedback');
-        });
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001-mobile.min.css?v=xFiYH0_zTHqf_pk9Nf2PvR4VdQ1qJnJcRVcot-VdM-8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/dstang2000/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/dstang2000/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/dstang2000/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 9986;
+        var currentBlogApp = 'dstang2000';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'AnotherEon001';
+        var visitorUserId = '';
     </script>
+        <script>
+            var currentPostDateAdded = '2010-11-02 05:43';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=l5MLSTLemATH1_zJmhkn0AWeaJtyzREb_jcbx3aWNaQ"></script>
+    
+    
+    
 </head>
-<body>
-
-    
-
-<div class="service" style="display: none;">
-    <div class="advice-box">
-        <img class="advice" src="/resources/pc/images/img/服务咨询静态.png"></img>
-        <p> 服务咨询 </p>
-        <!-- 百度热线 -->
-        <div class="hot-tip">
-            <p class="hot-line"> 百度热线 </p>
-            <p class="line"> 400-921-3900 </p>
-        </div>
-    </div>
-    
-</div>
-<div class="header-v">
-    <div class="header-first">
-        <div class="top-head clearfix">
-            <div class="top">
-                <div class="top-head-left">
-                    <img src="/resources/pc/images/img/百度彩色logo.png" alt="这是百度logo">
-
+<body class="has-navbar has-bannerbar">
+    <a name="top"></a>
+            <a target="_blank" href="https://cloud.baidu.com/campaign/2021mid/index.html?track=cp:bokeyuan|pf:pc|pp:bokeyuan-huodong-21nianzhongdacu-neiyePCtonglanbanner|pu:21nianzhongdacu-neiyePCtonglanbanner|ci:21nzdc|kw:10224545" onclick="ga('send', 'event', 'Link', 'click', 'baidu-cpa-blog-bannerbar-pc')">
+                <div class="bannerbar aliyun forpc" style="background-size: contain; filter: brightness(0.95); background-image: url(https://img2020.cnblogs.com/blog/35695/202106/35695-20210610183724605-1725070929.jpg)">
                 </div>
-                <div class="top-head-right">
-                                        <span class="notlogin" id="btnLogin" >登录</span>
-                    <a href="https://passport.baidu.com/v2/?reg&tpl=service_feedback&u=" class="register">注册</a>
-                                    </div>
+            </a>
+            <div id="bannerbar" class="bannerbar-mobile formobile">
+            <a href="https://cloud.baidu.com/campaign/2021mid/index.html?track=cp:bokeyuan|pf:mb|pp:bokeyuan-huodong-21nianzhongdacu-neiyeyidongduantonglanbanner|pu:21nianzhongdacu-neiyeyidongduantonglanbanner|ci:21nzdc|kw:10224547" onclick="ga('send', 'event', 'Link', 'click', 'baidu-cpa-blog-bannerbar-mobile')">
+                <img src="https://img2020.cnblogs.com/blog/35695/202106/35695-20210610184806729-1738888164.jpg" alt="" />
+            </a>
             </div>
-            <div class="content-back">
-                <div class="back">
-                    <div class="search">
-                        
-                        <form class="search-form" action="/search" name="f" id="searchForm">
-                            <div class="search-form-box">
-                                <input id="search_txt"
-                                       value=""
-                                       placeholder="请简单描述您遇到的问题" type="text" class="search-key" x-webkit-speech="true"
-                                       name="keywords" autocomplete="off" />
-                                <div class="btn">
-                                    <a id='submit'>
-                                        <img src="/resources/pc/images/img/search.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <ul id="searchSuggest" class="suggestion search-show" style="display: none;"></ul>
-                        </form>
-
-                    </div>
-                                                            <a href="/search?keywords=%E7%99%BE%E5%BA%A6%E5%B8%90%E5%8F%B7%E8%A2%AB%E7%9B%97"><button type="button"
-                            class="layui-btn layui-btn-radius layui-btn-normal firstBtn animated">百度帐号被盗</button></a>
-                                                                                                                                                                                                        <a href="/search?keywords=%E5%A6%82%E4%BD%95%E4%B8%BE%E6%8A%A5%E7%BD%91%E7%AB%99"><button type="button"
-                            class="layui-btn layui-btn-radius layui-btn-normal secondBtn animated">如何举报网站</button></a>
-                                                                                                                                                                                                        <a href="/search?keywords=%E6%8A%95%E8%AF%89%E4%BE%B5%E6%9D%83%E4%BF%A1%E6%81%AF"><button type="button"
-                            class="layui-btn layui-btn-radius layui-btn-normal threeBtn animated">投诉侵权信息</button></a>
-                                                                                                                                                                                                        <a href="/search?keywords=%E5%88%A0%E9%99%A4%2F%E6%9B%B4%E6%96%B0%E5%BF%AB%E7%85%A7"><button type="button"
-                            class="layui-btn layui-btn-radius layui-btn-normal fourBtn animated">删除/更新快照</button></a>
-                                                                                                                                                                                                        <a href="/search?keywords=%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB%E8%A2%AB%E5%B1%8F%E8%94%BD"><button type="button"
-                            class="layui-btn layui-btn-radius layui-btn-normal fiveBtn animated">网盘分享被屏蔽</button></a>
-                                                                                                                                                                                                        <a href="/search?keywords=%E7%BD%91%E6%B0%91%E6%9D%83%E7%9B%8A%E4%BF%9D%E9%9A%9C%E8%AE%A1%E5%88%92"><button type="button"
-                            class="layui-btn layui-btn-radius layui-btn-normal sixBtn animated">网民权益保障计划</button></a>
-                                                                                                                                                                                    
-                    <img class="person" src="/resources/pc/images/img/人物.gif" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="item item-weixin">
-    <div class="weixin-code"></div>
-</div>
-<div class="item item-weibo">
-    <div class="weibo-code"></div>
-</div>
-<a href="javascript:window.scroll(0,0);">
-    <div class="item item-zhiding"></div>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
 </a>
-</div> 
-<div class="content-serve">
-    <div class="serve-head motion-serve scroll-hidden">
-        <h1>服务支持</h1>
-    </div>
-
-    <div class="serve-list">
-        <div class="serve-item">
-            <a href="https://passport.baidu.com/center" target="_blank">
-                <div class="imgText">
-                    <img src="/resources/pc/images/img/账号安全.svg" alt="" class="img">
-                    <p>账号安全</p>
-                </div>
-                <div class="text">
-                    <p>密码及密保工具管理</p>
-                    <p>身份认证及账户关联</p>
-                    <p>账户申诉及在线客服</p>
-                </div>
-            </a>
-        </div>
-        <div class="serve-item">
-            <a href="http://baozhang.baidu.com/guarantee/" target="_blank">
-                <div class="imgText">
-                    <img src="/resources/pc/images/img/权益保障.svg" alt="" class="img">
-                    <p>权益保障</p>
-                </div>
-                <div class="text">
-                    <p>假冒官网受经济损失</p>
-                    <p>申请保障金及维权支持</p>
-                    <p>保障网民的消费权益</p>
-                </div>
-            </a>
-        </div>
-        <div class="serve-item">
-            <a href="/zhifu" target="_blank">
-                <div class="imgText">
-                    <img src="/resources/pc/images/img/支付相关.svg" alt="" class="img">
-                    <p>支付相关</p>
-                </div>
-                <div class="text">
-                    <p>VIP用户问题反馈</p>
-                    <p>24小时客服查询</p>
-                    <p>VIP开通页面直达</p>
-                </div>
-
-            </a>
-        </div>
-        <div class="serve-item">
-            <a href="/jubao" target="_blank">
-                <div class="imgText">
-                    <img src="/resources/pc/images/img/不良信息.svg" alt="" class="img">
-                    <p>不良信息</p>
-                </div>
-                <div class="text">
-                    <p>垃圾广告信息举报</p>
-                    <p>色情反动有害信息举报</p>
-                    <p>危险品赌博信息举报</p>
-                </div>
-            </a>
-        </div>
-        <div style="clear:both;"></div>
-    </div>
-</div >
-
-<div id='pcindexall'>
-
-</div>
-
-
-<!-- 网络安全 -->
-<div class="content-save">
-    <div class="save-head motion scroll-hidden">   
-        <h1>网络安全</h1>
-    </div>
-   
-        <div class="save-content">
-            <div class="net-work clearfix">
-                <div class="man-grass"> <img src="/resources/pc/images/img/man-grass.png" alt=""></div>
-                <img src="/resources/pc/images/img/man.png" alt="" class="man">
-                <!-- <div class="video-play motion scroll-hidden">
-               
-                <!-- 警告 -->
-                <div class="content-alarm">
-                    <div class="alarm-item alarm-item-china motion scroll-hidden">
-                        <div class="left">
-                            <img src="/resources/pc/images/img/中国举报.svg" alt="中国互联网举报中心">
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
                         </div>
-                        <div class="right">
-                            <a href="http://www.12377.cn/" target="_blank">
-                                <p class="title">中国互联网举报中心</p>
-                            </a>
-                            <p class="desc">中国互联网违法和不良信息举报中心是中央网络安全和信息化(国家互联网信息办公室)直属事业单位。<br />举报电话：12377</p>
-                        </div>
-                        <div style="clear: both;"></div>
                     </div>
-                    <div class="alarm-item alarm-item-bj motion scroll-hidden">
-                        <div class="left">
-                            <img src="/resources/pc/images/img/北京举报.svg" alt="北京互联网举报中心">
-                        </div>
-                        <div class="right">
-                            <a href="http://www.bjjubao.org/" target="_blank">
-                                <p class="title">北京互联网举报中心</p>
-                            </a>
-                            <p class="desc">北京互联网举报中心举报电话：010-67196565/010-67196566</p>
-                        </div>
-                        <div style="clear: both;"></div>
-                    </div>
-                    <div class="alarm-item alarm-item-net motion scroll-hidden">
-                        <div class="left">
-                            <img src="/resources/pc/images/img/网络110.svg" alt="网络110报警服务">
-                        </div>
-                        <div class="right">
-                            <a href="http://www.cyberpolice.cn/wfjb/" target="_blank">
-                                <p class="title">网络110报警服务</p>
-                            </a>
-                            <p class="desc">网络违法犯罪举报网站不具备现场、紧急报警的受理功能，如您的情况紧急，请立即拨打报警电话"110"</p>
-                        </div>
-                        <div style="clear: both;"></div>
-                    </div>
-                </div>
-                <div class="woman-grass"> <img src="/resources/pc/images/img/woman-grass.png" alt=""></div>
-                <img src="/resources/pc/images/img/woman.png" alt="" class="woman">
-                <div style="clear: both;"></div>
-            </div>
-        </div>
-    <!-- </div>  -->
-</div>
-
-<div class="content-contact">
-    <div class="contact-head motion scroll-hidden">
-        <h1>联系我们</h1>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div class="contact-w motion scroll-hidden">
-        <div class="wx">
-            <a href="javascript:;" class="wxBox">
-                <img class="wxAccount" src="/resources/pc/images/img/微信码位图.png" alt="微信公众号">
-            </a>
-            <p class="wx-title">微信公众号</p>
-        </div>
-        <div class="wb">
-            <a href="javascript:;" class="wbBox">
-                <img class="wbAccount" src="/resources/pc/images/img/微博码位图.png" alt="微博公众号">
-            </a>
-            <p class="wb-title">官方微博</p>
-        </div>
-    </div>
+
+    
+    <div id="wrapper">
+<div id="header">
+
+<div id="top">
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/dstang2000/">拓荒者 dstang2000 <a href="http://www.dstang.com"><font size=-1 color=red>http://www.dstang.com</font></a>
+</h1>
+<div id="subtitle">KISS：Keeping things that work，Improve systems procedures styles，Start things of value，Stop things of no value </div>
 </div>
+<div id="sub"><div id="blog_stats_place_holder"><script>loadBlogStats();</script></div></div>
 
 
 
-<div class="content-copy">
-    <ul class="copy-top">
-        <li>
-            <img src="/resources/pc/images/img/关于百度.svg" alt="这是一个图标">
-            <a href="http://home.baidu.com" target="_blank">关于百度</a>
-        </li>
-        <li>
-            <img src="/resources/pc/images/img/关于百度.svg" alt="这是一个图标">
-            <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-irhome"" target=" _blank">ABOUT BAIDU</a>
-        </li>
-        <li>
-            <img src="/resources/pc/images/img/使用百度前必读.svg" alt="这是一个图标">
-            <a href="http://www.baidu.com/duty/" target="_blank">使用百度前必读</a>
-        </li>
-        <li>
-            <img src="/resources/pc/images/img/举报受理声明.svg" alt="这是一个图标">
-            <a href="/statement">举报受理声明</a>
-        </li>
-        <li>
-            <img src="/resources/pc/images/img/个人信息咨询.svg" alt="这是一个图标">
-            <a href="/personalinformation">个人信息咨询</a>
-        </li>
-        <div style="clear: both;"></div>
-    </ul>
-    <div class="copy-bottom">
-        <ul>
-            <li>京ICP证030173号</li>
-            <li>京网文[2013]]0934-9833号</li>
-            <li>Copyright &copy;
-                <script>document.write((new Date()).getFullYear());</script> Baidu</li>
-            <div style="clear: both;"></div>
-        </ul>
+
+</div>
+<div id="main_container">
+<div id="main_content">
+<div id="content">
+	<div id="post_detail">
+    <div class="post">
+        <h2>
+            
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/dstang2000/archive/2010/11/02/1867406.html">
+    <span>实测:xml与json速度约差4倍</span>
+    
+
+
+
+</a>
+
+        </h2>
+        <div class="postbody">
+            <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p>xml与json在javascript中解析并使用，速度大约相差4倍。（在IE中测试的结果）。</p>
+<p>其中主要不在于eval,与xml parse的时间差别，主要在于属性访问上的差别：</p>
+<p>xml中使用这样的方式 markers[i].getAttribute("info") </p>
+<p>与json中使用这样的方式 var info = markers[i].info;</p>
+<p>相比， xml要慢不少。</p>
+<p>以下为测试的详情：</p>
+<p>&nbsp;</p>
+<div class="cnblogs_code"><img class="code_img_closed" id="code_img_closed_ee8d98db-5eac-4091-98e1-d524bfaeae80" src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img class="code_img_opened" id="code_img_opened_ee8d98db-5eac-4091-98e1-d524bfaeae80" style="display: none" src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif"><span class="cnblogs_code_collapse">代码</span>
+<div class="cnblogs_code_hide" id="cnblogs_code_open_ee8d98db-5eac-4091-98e1-d524bfaeae80">
+<div><span style="color: rgba(0, 0, 255, 1)">&lt;!</span><span style="color: rgba(255, 0, 255, 1)">DOCTYPE&nbsp;html&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;XHTML&nbsp;1.0&nbsp;Strict//EN"<br>&nbsp;&nbsp;&nbsp;&nbsp;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br></span><span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">html&nbsp;</span><span style="color: rgba(255, 0, 0, 1)">xmlns</span><span style="color: rgba(0, 0, 255, 1)">="http://www.w3.org/1999/xhtml"</span><span style="color: rgba(255, 0, 0, 1)">&nbsp;xmlns:v</span><span style="color: rgba(0, 0, 255, 1)">="urn:schemas-microsoft-com:vml"</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br>&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">head</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">meta&nbsp;</span><span style="color: rgba(255, 0, 0, 1)">http-equiv</span><span style="color: rgba(0, 0, 255, 1)">="content-type"</span><span style="color: rgba(255, 0, 0, 1)">&nbsp;content</span><span style="color: rgba(0, 0, 255, 1)">="text/html;&nbsp;charset=utf-8"</span><span style="color: rgba(0, 0, 255, 1)">/&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">title</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)">Google&nbsp;Maps&nbsp;JavaScript&nbsp;API&nbsp;Example:&nbsp;Simple&nbsp;Map</span><span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">title</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">script&nbsp;</span><span style="color: rgba(255, 0, 0, 1)">src</span><span style="color: rgba(0, 0, 255, 1)">="http://maps.google.com/maps?file=api&amp;amp;v=2&amp;amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA"</span><span style="color: rgba(255, 0, 0, 1)"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</span><span style="color: rgba(0, 0, 255, 1)">="text/javascript"</span><span style="color: rgba(0, 0, 255, 1)">&gt;&lt;/</span><span style="color: rgba(128, 0, 0, 1)">script</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">script&nbsp;</span><span style="color: rgba(255, 0, 0, 1)">type</span><span style="color: rgba(0, 0, 255, 1)">="text/javascript"</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)"><br><br></span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">全局变量</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;map&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">null</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;<br><br></span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">function</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;initialize()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">if</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">!</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">GBrowserIsCompatible())&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">return</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;map&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;GMap2(document.getElementById(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">map_canvas</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">));<br>&nbsp;&nbsp;&nbsp;&nbsp;map.addMapType(&nbsp;G_PHYSICAL_MAP&nbsp;);<br>&nbsp;&nbsp;&nbsp;&nbsp;map.addMapType(G_SATELLITE_3D_MAP);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;map.setCenter(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;GLatLng(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">39.9</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">,&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">116.00</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">),&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">6</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;map.addControl(&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;GMapTypeControl()&nbsp;);<br>&nbsp;&nbsp;&nbsp;&nbsp;map.addControl(&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;GLargeMapControl()&nbsp;);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;map.enableContinuousZoom();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;GEvent.addListener(map,&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">mousemove</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">,&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">function</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">(p){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">if</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">!</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">p)</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">return</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.status&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">经纬度&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;(Math.round(p.lng()</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">*</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">100000</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">/</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">100000</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">,&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;(Math.round(p.lat()</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">*</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">100000</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">/</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">100000</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br>&nbsp;&nbsp;&nbsp;&nbsp;});<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;t0&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;Date();<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">for</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">0</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">100</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">++</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;home_point&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;GLatLng(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">37.056136</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">/</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">1e4,114.457626+i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">/</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">1e4</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.addOverlay(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;GMarker(home_point));&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;t1&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;Date();<br>&nbsp;&nbsp;&nbsp;&nbsp;alert(t1</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">-</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">t0);&nbsp;</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">1000用时6.3秒</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)"><br>&nbsp;&nbsp;&nbsp;&nbsp;testSpeed();<br>}<br><br></span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">function</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;testSpeed()<br>{<br><br></span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">-----------------------------------</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;ary&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">[];<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">for</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">0</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">10000</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">++</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ary.push(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">'</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;marker&nbsp;msid="13615532361"&nbsp;lng="104.0447"&nbsp;lat="30.684"&nbsp;status="0"&nbsp;info="川A7G222.&nbsp;&amp;lt;br&amp;gt;&nbsp;力帆体育场店&amp;lt;br&amp;gt;&nbsp;2010-10-27&nbsp;12:54:39&nbsp;"&nbsp;/&gt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">'</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;doc&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;current&gt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;ary.join(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">""</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;/current&gt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;t0&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;Date();<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;xmlDoc&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;GXml.parse(doc);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">if</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">(&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">!</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;xmlDoc&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">||</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">!</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;xmlDoc.documentElement)&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">return</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;xmlDoc.documentElement.getElementsByTagName(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">marker</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">for</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;i&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">0</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers.length;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">++</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;lat&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;parseFloat(markers[i].getAttribute(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">lat</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;lng&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;parseFloat(markers[i].getAttribute(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">lng</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;msid&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i].getAttribute(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">msid</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;status&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i].getAttribute(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">status</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;info&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i].getAttribute(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">info</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;t1&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;Date();<br>&nbsp;&nbsp;&nbsp;&nbsp;alert(t1</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">-</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">t0);&nbsp;</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">0.57秒</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">-----------------------------------</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;ary&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">[];<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">for</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">0</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">10000</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">++</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ary.push(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">'</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">["13615532361",104.0447,30.684,0,"川A7G222.&nbsp;&amp;lt;br&amp;gt;&nbsp;力帆体育场店&amp;lt;br&amp;gt;&nbsp;2010-10-27&nbsp;12:54:39"]</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">'</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;doc&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">[</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;ary.join(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">,</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">]</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;t0&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;Date();<br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;eval(doc);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">for</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;i&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">0</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers.length;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">++</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;lat&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;parseFloat(markers[i][</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">1</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;lng&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;parseFloat(markers[i][</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">2</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;msid&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i][</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">0</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;status&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i][</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">3</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;info&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i][</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">4</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;t1&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;Date();<br>&nbsp;&nbsp;&nbsp;&nbsp;alert(t1</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">-</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">t0);&nbsp;</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">0.15秒</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">-----------------------------------</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;ary&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">[];<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">for</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">0</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">10000</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">++</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;){<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ary.push(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">'</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">{msid:"13615532361",lng:104.0447,lat:30.684,status:0,info:"川A7G222.&nbsp;&amp;lt;br&amp;gt;&nbsp;力帆体育场店&amp;lt;br&amp;gt;&nbsp;2010-10-27&nbsp;12:54:39"}</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">'</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;doc&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">[</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;ary.join(</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">,</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">+</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">]</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">"</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;t0&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;Date();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;eval(doc);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">for</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;(</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;i&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">0</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">;&nbsp;i&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&lt;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers.length;&nbsp;i</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">++</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;obtain&nbsp;the&nbsp;attribues&nbsp;of&nbsp;each&nbsp;marker</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;lat&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;parseFloat(markers[i].lat);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;lng&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;parseFloat(markers[i].lng);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;msid&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i].msid;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;status&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i].status;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;info&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;markers[i].info;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">var</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;t1&nbsp;</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">=</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;</span><span style="color: rgba(0, 0, 255, 1); background-color: rgba(245, 245, 245, 1)">new</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">&nbsp;Date();<br>&nbsp;&nbsp;&nbsp;&nbsp;alert(t1</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">-</span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)">t0);&nbsp;</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">//</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)">0.15秒</span><span style="color: rgba(0, 128, 0, 1); background-color: rgba(245, 245, 245, 1)"><br></span><span style="color: rgba(0, 0, 0, 1); background-color: rgba(245, 245, 245, 1)"><br>}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">script</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br>&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">head</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br>&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">body&nbsp;</span><span style="color: rgba(255, 0, 0, 1)">onload</span><span style="color: rgba(0, 0, 255, 1)">="initialize()"</span><span style="color: rgba(255, 0, 0, 1)">&nbsp;onunload</span><span style="color: rgba(0, 0, 255, 1)">="GUnload()"</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br>&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div&nbsp;</span><span style="color: rgba(255, 0, 0, 1)">id</span><span style="color: rgba(0, 0, 255, 1)">="map_canvas"</span><span style="color: rgba(255, 0, 0, 1)">&nbsp;style</span><span style="color: rgba(0, 0, 255, 1)">="width:&nbsp;800px;&nbsp;height:&nbsp;600px"</span><span style="color: rgba(0, 0, 255, 1)">&gt;&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br><br><br>&nbsp;&nbsp;</span><span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">body</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span><span style="color: rgba(0, 0, 0, 1)"><br></span><span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">html</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span></div></div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+        </div>
+        <p class="postfoot">
+            posted on 
+<span id="post-date">2010-11-02 17:43</span>&nbsp;
+<a href="https://www.cnblogs.com/dstang2000/">拓荒者</a>&nbsp;
+阅读(<span id="post_view_count">1064</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=1867406" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(1867406);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: '', targetType: 'blogPost', targetId: '1867406', targetLink: 'https://www.cnblogs.com/dstang2000/archive/2010/11/02/1867406.html', title: '实测:xml与json速度约差4倍' })">举报</a>
+        </p>
     </div>
 </div>
 
-
-
-
-
-<!--[if lt IE 9]>
-
-<script type="text/javascript" src="/resources/js/commonFankui.js"></script>
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
 <script>
-    var html = '<div class="browser-up-tip">您的<span style="color:red;">浏览器版本太低</span>，为了给您带来更好的体验，建议您的浏览器升级为<a href="http://rj.baidu.com/soft/detail/14744.html?ald" target="_blank">谷歌浏览器</a>或者<a href="http://rj.baidu.com/soft/detail/11843.html?ald" target="_blank">Firefox火狐浏览器</a>，如需<a href="/index2">继续访问</a>将前往低版本服务中心平台，谢谢!</div>';
-    Popup.init({
-        type: 'html',
-        content: html,
-        width: 560,
-        height: 350
-    });
-    Popup.overlay.unbind('click');
-    $('#popupTitle').find('.pop-ico-close').remove();
+    var allowComments = true, cb_blogId = 9986, cb_blogApp = 'dstang2000', cb_blogUserGuid = 'd796310b-63cf-dd11-9e4d-001cf0cd104b';
+    var cb_entryId = 1867406, cb_entryCreatedDate = '2010-11-02 17:43', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
 </script>
-<![endif]-->
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="cnblogs_c2" class="under-post-card">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
 
-<script src="/resources/pc/js/dist/indexnew.min.js?timestamp=20181226"></script>
-<script>var sugapi="http://"+window.location.host;</script>
-<script type="text/javascript" src="/resources/pc/js/src/sug.js"></script>
 
+
+</div>
+</div>
+<div id="leftmenu">
+
+
+<h3>导航</h3>
+<ul>
+    <li>
+        <a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+
+    </li>
+    <li>
+        
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/dstang2000/">
+首页</a>
+
+    </li>
+    <li>
+        
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+
+    </li>
+    <li>
+        
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%8B%93%E8%8D%92%E8%80%85">
+联系</a>
+    </li>
+    <li>
+        
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/dstang2000/rss/">
+订阅</a>
+        
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/dstang2000/rss/">
+    <img src="/skins/anothereon001/images/xml.gif" alt="订阅" />
+</a>
+    </li>
+    <li>
+        
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+
+    </li>
+</ul>
+
+
+<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+
+</div>
+</div>
+<div class="clear"></div>
+<div id="footer">
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2021 拓荒者
+<br /><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+</p>
+
+
+</div>
+</div>
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjs5koC5FNDGADiKZ0aVcZnhUvgFwFJgGfK9lTYV1LgUu_imURJBD9kjCb37jFtIQGDSGnd6JDaXfMQOeh_4gznqi28gwiFrlIP4YkI8P-gCt7dMfAkhA2HHh6JCXggmVeA" />
 </body>
-
-
 </html>

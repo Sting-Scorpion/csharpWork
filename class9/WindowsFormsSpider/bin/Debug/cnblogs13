@@ -12,7 +12,7 @@
     <title>分不清正数负数，是我错了，还是VS.NET错了 - 拓荒者 - 博客园</title>
     <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
     
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=zS6-e1bxywlu3kpHvpr1J6MySwya3ztFtEnS7RYQ0Fk" />
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=6tvK5XC6GPbg3p_sy7wzz_2291HoYACr4440iKBzQIw" />
     <link id="MainCss" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001.min.css?v=9x2ZP2K8SSBJowZA6xv0D5FvOmlvd5g21u0NBEAEwfQ" />
     
     <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001-mobile.min.css?v=xFiYH0_zTHqf_pk9Nf2PvR4VdQ1qJnJcRVcot-VdM-8" />
@@ -33,22 +33,22 @@
             var currentPostDateAdded = '2005-03-05 02:45';
         </script>
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
-    <script src="/js/blog-common.min.js?v=2Mic1VLeHXarpdzASbXqFMIMVLEBiWXNO5yiTHUcmhw"></script>
+    <script src="/js/blog-common.min.js?v=l5MLSTLemATH1_zJmhkn0AWeaJtyzREb_jcbx3aWNaQ"></script>
     
     
     
 </head>
 <body class="has-navbar has-bannerbar">
     <a name="top"></a>
-        <a target="_blank" href="https://www.aliyun.com/activity/daily/bestoffer?userCode=swh7dvlt" onclick="ga('send', 'event', 'Link', 'click', 'aliyun-cps-blog-bannerbar-pc')">
-            <div class="bannerbar aliyun forpc" style="background-size: contain;background-image: url(https://img2020.cnblogs.com/blog/35695/202104/35695-20210428221933214-737067094.jpg)">
-            </div>
-        </a>
-        <div id="bannerbar" class="bannerbar-mobile formobile">
-            <a href="https://www.aliyun.com/activity/daily/bestoffer?userCode=swh7dvlt" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'aliyun-cps-blog-bannerbar-mobile')">
-                <img src="https://img2020.cnblogs.com/blog/35695/202104/35695-20210428213541700-642740375.jpg" alt="" />
+            <a target="_blank" href="https://cloud.baidu.com/campaign/2021mid/index.html?track=cp:bokeyuan|pf:pc|pp:bokeyuan-huodong-21nianzhongdacu-neiyePCtonglanbanner|pu:21nianzhongdacu-neiyePCtonglanbanner|ci:21nzdc|kw:10224545" onclick="ga('send', 'event', 'Link', 'click', 'baidu-cpa-blog-bannerbar-pc')">
+                <div class="bannerbar aliyun forpc" style="background-size: contain; filter: brightness(0.95); background-image: url(https://img2020.cnblogs.com/blog/35695/202106/35695-20210610183724605-1725070929.jpg)">
+                </div>
             </a>
-        </div>
+            <div id="bannerbar" class="bannerbar-mobile formobile">
+            <a href="https://cloud.baidu.com/campaign/2021mid/index.html?track=cp:bokeyuan|pf:mb|pp:bokeyuan-huodong-21nianzhongdacu-neiyeyidongduantonglanbanner|pu:21nianzhongdacu-neiyeyidongduantonglanbanner|ci:21nzdc|kw:10224547" onclick="ga('send', 'event', 'Link', 'click', 'baidu-cpa-blog-bannerbar-mobile')">
+                <img src="https://img2020.cnblogs.com/blog/35695/202106/35695-20210610184806729-1738888164.jpg" alt="" />
+            </a>
+            </div>
     <div id="top_nav" class="navbar forpc">
         <nav id="nav_main" class="navbar-main">
             <ul id="nav_left" class="navbar-list navbar-left">
@@ -286,10 +286,11 @@
             posted on 
 <span id="post-date">2005-03-05 14:45</span>&nbsp;
 <a href="https://www.cnblogs.com/dstang2000/">拓荒者</a>&nbsp;
-阅读(<span id="post_view_count">2657</span>)&nbsp;
+阅读(<span id="post_view_count">2662</span>)&nbsp;
 评论(<span id="post_comment_count">5</span>)&nbsp;
 <a href="https://i.cnblogs.com/EditPosts.aspx?postid=113513" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(113513);return false;">收藏</a>
+<a href="javascript:void(0)" onclick="AddToWz(113513);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: '', targetType: 'blogPost', targetId: '113513', targetLink: 'https://www.cnblogs.com/dstang2000/archive/2005/03/05/113513.html', title: '分不清正数负数，是我错了，还是VS.NET错了' })">举报</a>
         </p>
     </div>
 </div>
@@ -420,6 +421,6 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId
 
     
 
-    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjvi4vqDLBYor85l5wzr7UaWvf3N7k3KHobJjcTfHwBv2raRq1FxtXafz2pFF383vcaxEq0VEVbItG6yDi8CkaSSraSSfFZwRRF-_6iigfZR6DCg_2TZPDSWZYiVD6OCajE" />
+    <input type="hidden" id="antiforgery_token" value="CfDJ8L-rpLgFVEJMgssCVvNUAjs5jt9a_C6shhyUyyx0A9-mWx3fpMOqTnuZBQzum1gCjaR0KXUHOwMGrT19tJ8hQuxFA7LWfbdHpuqq1IHN1L4JV3RVRAY_pH-oPAlizltHkwF6psyHYyAgDUWyf1wO3fw" />
 </body>
 </html>

@@ -15,6 +15,7 @@ namespace WindowsFormsSpider
     public partial class Form1 : Form
     {
         Crawler crawler = new Crawler();
+        Thread thread = null;
         public Form1()
         {
             InitializeComponent();
@@ -60,8 +61,12 @@ namespace WindowsFormsSpider
             string host = match.Groups["host"].Value;
             crawler.HostFilter = "^" + host + "$";
             crawler.FileFilter = "((.html?|.aspx|.jsp|.php)$|^[^.]+$)";
-            //crawler.Start();
-            new Thread(crawler.Start).Start();
+            if(thread != null)
+            {
+                thread.Abort();
+            }
+            thread = new Thread(crawler.Start);
+            thread.Start();
             //Task.Run(() => crawler.Start());
             lblInfo.Text = "爬虫已启动....";
         }
