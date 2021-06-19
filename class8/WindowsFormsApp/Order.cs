@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace WindowsFormsApp
 {
@@ -10,15 +11,16 @@ namespace WindowsFormsApp
     public class Order
     {
         //public properties
+        [Key]
+        public string OrderID { get; set; }
         public Client Buyer { get; set; }
         public List<OrderDetails> OrderDetail { get; set; } = new List<OrderDetails>();
-        public string No { get; set; }
         public double TotalPrice { get => OrderDetail.Sum(d => d.Amount); }
 
         public Order() { }
         public Order(Client buyer, string no)
         {
-            this.No = no;
+            this.OrderID = no;
             this.Buyer = buyer;
         }
        
@@ -27,17 +29,17 @@ namespace WindowsFormsApp
         {
             string det = "detail: ";
             OrderDetail.ForEach(x => det += "\n\t" + x);
-            return det + "\nclient:" + Buyer + "\npro: \torder No: " + No + "\n\ttotal price: " + TotalPrice;
+            return det + "\nclient:" + Buyer + "\npro: \torder No: " + OrderID + "\n\ttotal price: " + TotalPrice;
         }
         public override bool Equals(object obj)
         {
             Order m = obj as Order;
-            if (m != null && m.No == No && m.Buyer == Buyer) return true;
+            if (m != null && m.OrderID == OrderID && m.Buyer == Buyer) return true;
             else return false;
         }
         public override int GetHashCode()
         {
-            return Convert.ToInt32(No);
+            return Convert.ToInt32(OrderID);
         }
         public bool AddDetails(OrderDetails orderDetail)
         {
@@ -61,7 +63,7 @@ namespace WindowsFormsApp
         public int CompareTo(Order other)
         {
             if (other == null) return 1;
-            return Convert.ToInt32(No) - Convert.ToInt32(other.No);
+            return Convert.ToInt32(OrderID) - Convert.ToInt32(other.OrderID);
         }
         public IEnumerable<OrderDetails> FindTime(string m)
         {

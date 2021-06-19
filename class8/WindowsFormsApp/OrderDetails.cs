@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace WindowsFormsApp
 {
@@ -10,6 +11,7 @@ namespace WindowsFormsApp
     public class OrderDetails
     {
         //公共属性
+        [Key]
         public Merchandise Goods { get; set; }
         public int Number { get; set; }
         public string Time { get; set; }
